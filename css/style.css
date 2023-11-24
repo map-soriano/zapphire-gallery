@@ -27,6 +27,10 @@ body {
     color: #f2f2f2;
     font-family: 'DM Sans', 'Inter', sans-serif;
     animation: fadeIn 2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 hr {
@@ -52,6 +56,10 @@ header {
 
 header:hover {
     opacity: 1;
+    scale: 1.1;
+    transform: translateX(-28%);
+    left: 35%;
+    box-shadow: 0px 0px 5px 5px rgba(242, 242, 242, 0.2);
     transition: all 0.5s ease-in-out;
 }
 
