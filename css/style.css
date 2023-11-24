@@ -8,3 +8,38 @@ body {
     color: #f2f2f2;
     font-family: 'Inter';
 }
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: fit-content;
+    width: 80%;
+    border-radius: 20px;
+    background-color: #262626;
+}
+
+header h4 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: -75px;
+    margin-left: 75%;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-links a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 24px;
+}
