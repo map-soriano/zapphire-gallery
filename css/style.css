@@ -20,6 +20,12 @@ header {
     background-color: #262626;
 }
 
+header h4 img {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
 header h4 {
     font-size: 32px;
     font-weight: bold;
