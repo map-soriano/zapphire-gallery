@@ -9,6 +9,7 @@ body {
     font-family: 'Inter';
 }
 
+/* Nav */
 header {
     position: absolute;
     top: 20px;
@@ -48,4 +49,55 @@ header h4 {
     color: #f2f2f2;
     text-decoration: none;
     font-size: 24px;
+}
+
+/* Home */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 50px;
+    }
+    20% {
+        margin-left: -1080px;
+    }
+    40% {
+        margin-left: -2160px;
+    }
+    60% {
+        margin-left: -4240px;
+    }
+    80% {
+        margin-left: -6500px;
+    }
+    100% {
+        margin-left: 50px;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+#home img {
+    height: 500px;
+    max-width: 1080px;
+    margin-right: 20px;
+    border-radius: 20px;    
+}
+    
+#home img {
+    height: 500px;
+    max-width: 1080px;
+    margin-right: 20px;
+    border-radius: 20px;    
 }
