@@ -21,7 +21,7 @@ body {
     background-color: #0d0d0d;
     color: #f2f2f2;
     font-family: 'Inter', sans-serif;
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 hr {
@@ -106,8 +106,10 @@ header h4 {
     display: flex;
     overflow: hidden;
     margin-top: 20px;
+    margin-left: 50px;
     padding: 20px;
     animation: slide 20s infinite;
+    animation-delay: 500ms;
 }
 
 @keyframes slide {
