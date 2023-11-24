@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(/assets/font/Inter-VariableFont_slnt,wght.ttf) format('truetype');
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    font-family: 'Inter';
+}
