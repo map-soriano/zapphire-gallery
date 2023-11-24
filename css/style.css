@@ -23,6 +23,11 @@ body {
     font-family: 'Inter';
 }
 
+hr {
+    width: 60%;
+    margin: 0 auto;
+}
+
 /* Nav */
 header {
     position: absolute;
@@ -93,6 +98,7 @@ header h4 {
     margin-top: 10px;
 }
 
+/* Gallery */
 .slider {
     display: flex;
     overflow: hidden;
@@ -135,6 +141,6 @@ header h4 {
     height: 600px;
     border: 2px solid #f2f2f2;
     filter: grayscale(0%);
-    z-index: 1;
+    box-shadow: 0px 0px 10px #f2f2f2;
     transition: all 0.5s ease-in-out;
 }
