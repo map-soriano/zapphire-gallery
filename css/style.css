@@ -60,9 +60,22 @@ header h4 {
     margin-top: 100px;
 }
 
+.section-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.section-header p {
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 10px;
+}
+
 .slider {
     display: flex;
     overflow: hidden;
+    margin-top: 20px;
     animation: slide 20s infinite;
 }
 
@@ -88,7 +101,7 @@ header h4 {
     }
 }
 
-#home img {
+#gallery img {
     height: 500px;
     max-width: 1080px;
     margin-right: 30px;
@@ -97,7 +110,7 @@ header h4 {
     transition: all 0.5s ease-in-out;
 }
 
-#home img:hover {
+#gallery img:hover {
     height: 600px;
     border: 2px solid #f2f2f2;
     filter: grayscale(0%);
