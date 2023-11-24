@@ -14,13 +14,14 @@
 }
 
 html {
-    animation: fadeIn 3s ease-in-out;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #0d0d0d;
     color: #f2f2f2;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
+    animation: fadeIn 3s ease-in-out;
 }
 
 hr {
