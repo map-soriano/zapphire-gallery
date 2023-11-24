@@ -110,7 +110,7 @@ header h4 {
 
 @keyframes slide {
     0% {
-        margin-left: 0px;
+        margin-left: 50px;
     }
     20% {
         margin-left: -1500px;
@@ -122,10 +122,10 @@ header h4 {
         margin-left: -4500px;
     }
     80% {
-        margin-left: -6500px;
+        margin-left: -6750px;
     }
     100% {
-        margin-left: 0px;
+        margin-left: 50px;
         animation-timing-function: ease-in-out;
     }
 }
