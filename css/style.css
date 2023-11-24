@@ -3,6 +3,20 @@
     src: url(/assets/font/Inter-VariableFont_slnt,wght.ttf) format('truetype');
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+html {
+    animation: fadeIn 3s ease-in-out;
+}
+
 body {
     background-color: #0d0d0d;
     color: #f2f2f2;
@@ -19,6 +33,13 @@ header {
     width: 80%;
     border-radius: 20px;
     background-color: #262626;
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+}
+
+header:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 header h4 img {
@@ -81,7 +102,7 @@ header h4 {
 
 @keyframes slide {
     0% {
-        margin-left: 50px;
+        margin-left: 0px;
     }
     20% {
         margin-left: -1500px;
@@ -96,7 +117,7 @@ header h4 {
         margin-left: -6500px;
     }
     100% {
-        margin-left: 50px;
+        margin-left: 0px;
         animation-timing-function: ease-in-out;
     }
 }
