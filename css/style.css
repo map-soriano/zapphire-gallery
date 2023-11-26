@@ -227,6 +227,13 @@ header h4 {
     border-radius: 20px;
     box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.2);
     padding: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.item-card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 10px 10px rgba(100, 100, 100, 0.2);
+    transition: all 0.5s ease-in-out;
 }
 
 .card-header img {
