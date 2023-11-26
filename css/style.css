@@ -42,10 +42,13 @@ hr {
 
 /* Nav */
 .header-container {
+    width: 100%;
+    position:fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    z-index: 1;
 }
 
 header {
