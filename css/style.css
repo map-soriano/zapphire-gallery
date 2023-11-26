@@ -276,3 +276,123 @@ header h4 {
     list-style-type: symbols(cyclic "🔹");
     filter: grayscale(100%);
 }
+
+/* Mobile Styles */
+@media screen and (orientation: portrait) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        width: fit-content;
+        height: 60%;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    
+    header h4 img {
+        height: 0px;
+        width: 0px;
+        opacity: 0%;
+        margin: 0;
+        visibility: hidden;
+    }
+    
+    header h4 {
+        font-size: 0px;
+        opacity: 0%;
+        margin: 0;
+    }
+    
+    .nav-links {
+        list-style: none;
+        text-align: left;
+        margin: 0 0 0 -40px;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .section-header h1 {
+        font-size: 18px;
+    }
+
+    .section-header p {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .slider {
+        margin-left: 0;
+        animation: slide 30s infinite;
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
+        20% {
+            margin-left: -800px;
+        }
+        40% {
+            margin-left: -1600px;
+        }
+        60% {
+            margin-left: -3200px;
+        }
+        80% {
+            margin-left: -4800px;
+        }
+        100% {
+            margin-left: 0px;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    #gallery img {
+        height: 300px;
+        filter: grayscale(0%);
+    }
+
+    #gallery img:hover {
+        height: 300px;
+    }
+
+    .price-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .item-card {
+        width: 80%;
+        padding: 25px;
+    }
+
+    .card-header img {
+        height: 200px;
+    }
+
+    .card-header h2 {
+        font-size: 36px;
+    }
+
+    .card-header h3 {
+        font-size: 32px;
+    }
+
+    .card-header h4 {
+        font-size: 24px;
+    }
+
+    .card-body ul {
+        font-size: 18px;
+    }
+}
