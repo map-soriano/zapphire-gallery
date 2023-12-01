@@ -366,7 +366,7 @@ header h4 {
     }
 
     .price-cards {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 20px;
     }
