@@ -154,12 +154,12 @@ header h4 {
 .slider {
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    overflow: scroll;
     margin-top: 20px;
     margin-left: 50px;
-    padding: 20px;
-    animation: slide 20s infinite;
-    animation-delay: 500ms;
+    padding: 50px;
+    /* animation: slide 20s infinite;
+    animation-delay: 500ms; */
 }
 
 @keyframes slide {
@@ -331,7 +331,7 @@ header h4 {
 
     .slider {
         margin-left: 0;
-        animation: slide 30s infinite;
+        /* animation: slide 30s infinite; */
     }
 
     @keyframes slide {
@@ -366,7 +366,7 @@ header h4 {
     }
 
     .price-cards {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 20px;
     }
