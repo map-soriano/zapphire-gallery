@@ -158,8 +158,13 @@ header h4 {
     margin-top: 20px;
     margin-left: 50px;
     padding: 50px;
-    /* animation: slide 20s infinite;
-    animation-delay: 500ms; */
+    animation: slide 20s infinite;
+    animation-delay: 500ms;
+    overflow-x: hidden;
+}
+
+.slider:hover {
+    animation-play-state: paused;
 }
 
 @keyframes slide {
@@ -331,7 +336,12 @@ header h4 {
 
     .slider {
         margin-left: 0;
-        /* animation: slide 30s infinite; */
+        animation: slide 30s infinite;
+        overflow-x: hidden;
+    }
+
+    .slider:hover {
+        animation-play-state: paused;
     }
 
     @keyframes slide {
