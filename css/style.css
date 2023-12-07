@@ -1,3 +1,9 @@
+:root {
+    --background-color: #0d0d0d;
+    --nav-color: #757575;
+    --text-color: #f2f2f2;
+}
+
 @font-face {
     font-family: 'Inter';
     src: url(/assets/font/Inter-VariableFont_slnt,wght.ttf) format('truetype');
