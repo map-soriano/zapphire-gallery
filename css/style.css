@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    background-color: #0d0d0d;
+    background-color: var(--background-color);
     color: #f2f2f2;
     font-family: 'DM Sans', 'Inter', sans-serif;
     animation: fadeIn 2s ease-in-out;
