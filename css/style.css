@@ -80,7 +80,7 @@ header a {
 }
 
 header a:hover {
-    color: #757575;
+    color: var(--nav-color);
     transition: all 0.5s ease-in-out;
 }
 
