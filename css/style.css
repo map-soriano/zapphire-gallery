@@ -33,6 +33,7 @@ html {
 }
 
 body {
+    box-sizing: border-box;
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'DM Sans', 'Inter', sans-serif;
