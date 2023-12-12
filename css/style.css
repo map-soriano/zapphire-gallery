@@ -153,6 +153,11 @@ header h4 {
 }
 
 /* Gallery */
+#gallery {
+    width: 100%;
+    height: 100vh;
+}
+
 .slider {
     display: flex;
     gap: 20px;
@@ -213,7 +218,8 @@ header h4 {
 
 /* Pricing */
 #pricing {
-    margin-top: 10%;
+    width: 100%;
+    height: 100vh;
 }
 
 .price-cards {
