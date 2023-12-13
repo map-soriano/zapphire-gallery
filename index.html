@@ -15,6 +15,11 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <div class="background">
+            <video autoplay muted loop id="bg-video">
+                <source src="assets/mp4/vid.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="header-container">
             <header>
                 <nav>
@@ -24,7 +29,7 @@
                     <ul class="nav-links">
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="https://www.facebook.com/rvch.pasamonte18" target="_blank">Contact</a></li>
+                        <li><a style="cursor: pointer" target="_blank" onclick=showWarning()>Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -106,6 +111,11 @@
             </main>
         </div>
         <script>
+
+            const showWarning = () => {
+                confirm("This will open Facebook in a new tab. Continue?") ? window.open( href="https://www.facebook.com/rvch.pasamonte18", "_blank") : null;
+            }
+
             document.addEventListener('contextmenu', (e) => {
                 e.preventDefault();
             });
