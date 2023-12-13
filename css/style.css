@@ -1,6 +1,6 @@
 :root {
     --background-color: #0d0d0d;
-    --nav-color: #757575;
+    --sub-nav-color: #757575;
     --text-color: #f2f2f2;
 }
 
@@ -82,7 +82,7 @@ header a {
 }
 
 header a:hover {
-    color: var(--nav-color);
+    color: var(--sub-nav-color);
 }
 
 header h4 img {
