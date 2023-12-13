@@ -1,5 +1,6 @@
 :root {
     --background-color: #0d0d0d;
+    --main-nav-color: #262626;
     --sub-nav-color: #757575;
     --text-color: #f2f2f2;
 }
@@ -65,7 +66,7 @@ hr {
 header {
     width: 80%;
     border-radius: 20px;
-    background-color: #262626;
+    background-color: var(--main-nav-color);
     opacity: 0.5;
 }
 
@@ -234,7 +235,7 @@ header h4 {
 .item-card {
     height: 100%;
     width: 500px;
-    background-color: #262626;
+    background-color: var(--main-nav-color);
     border: 1px solid #f2f2f25a;
     border-radius: 20px;
     box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.2);
