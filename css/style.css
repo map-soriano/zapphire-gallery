@@ -230,7 +230,7 @@ header h4 {
     flex-direction: row-reverse;
     justify-content: center;
     gap: 50px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .item-card {
