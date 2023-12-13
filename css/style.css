@@ -352,6 +352,11 @@ header h4 {
         text-align: center;
     }
 
+    #gallery,
+    #pricing {
+        padding-top: 10%;
+    }
+
     .slider {
         margin-left: 0;
         animation: slide 30s infinite;
