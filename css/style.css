@@ -180,7 +180,7 @@ header h4 {
     padding: 50px;
     animation: slide 20s infinite;
     animation-delay: 500ms;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .slider:hover {
