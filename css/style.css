@@ -178,9 +178,9 @@ header h4 {
     margin-top: 20px;
     margin-left: 50px;
     padding: 50px;
-    animation: slide 20s infinite;
+    animation: slide 20s infinite linear;
     animation-delay: 500ms;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .slider:hover {
@@ -359,7 +359,7 @@ header h4 {
 
     .slider {
         margin-left: 0;
-        animation: slide 30s infinite;
+        animation: slide 30s infinite linear;
         overflow-x: hidden;
     }
 
