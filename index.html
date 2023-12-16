@@ -44,23 +44,23 @@
                     </div>
                     <hr>
                     <div class="slider">
-                        <img src="assets/img/colored/1.jpg">
-                        <img src="assets/img/colored/2.JPG">
-                        <img src="assets/img/colored/3.JPG">
-                        <img src="assets/img/colored/4.JPG">
-                        <img src="assets/img/colored/5.JPG">
-                        <img src="assets/img/colored/6.JPG">
-                        <img src="assets/img/colored/7.JPG">
-                        <img src="assets/img/colored/8.JPG">
-                        <img src="assets/img/colored/9.JPG">
-                        <img src="assets/img/colored/10.JPG">
-                        <img src="assets/img/colored/11.JPG">
-                        <img src="assets/img/grayscaled/1.jpg">
-                        <img src="assets/img/grayscaled/2.jpg">
-                        <img src="assets/img/grayscaled/3.jpg">
-                        <img src="assets/img/grayscaled/4.jpg">
-                        <img src="assets/img/others/1.JPG">
-                        <img src="assets/img/others/2.JPG">
+                        <img src="assets/img/colored/1.jpg" onclick="fullImage(this)">
+                        <img src="assets/img/colored/2.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/3.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/4.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/5.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/6.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/7.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/8.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/9.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/10.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/11.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/grayscaled/1.jpg" onclick="fullImage(this)">
+                        <img src="assets/img/grayscaled/2.jpg" onclick="fullImage(this)">
+                        <img src="assets/img/grayscaled/3.jpg" onclick="fullImage(this)">
+                        <img src="assets/img/grayscaled/4.jpg" onclick="fullImage(this)">
+                        <img src="assets/img/others/1.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/others/2.JPG" onclick="fullImage(this)">
                     </div>
                 </section>
                 <hr class="full">
@@ -114,6 +114,28 @@
 
             const showWarning = () => {
                 confirm("This will open Facebook in a new tab. Continue?") ? window.open( href="https://www.facebook.com/rvch.pasamonte18", "_blank") : null;
+            }
+
+            const fullImage = (event) => {
+                const slider = document.querySelector('.slider');
+                const img = document.createElement('img');
+                slider.style.filter = 'blur(5px)';
+                slider.animation = 'paused';
+                img.src = event.src;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'contain';
+                img.style.position = 'fixed';
+                img.style.top = '0';
+                img.style.left = '0';
+                img.style.zIndex = '9999';
+                img.style.cursor = 'zoom-out';
+                img.style.animation = 'fadeIn ease 0.5s';
+                img.onclick = () => {
+                    img.remove();
+                    slider.style.filter = 'none';
+                }
+                document.body.appendChild(img);
             }
 
             document.addEventListener('contextmenu', (e) => {
