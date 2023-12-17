@@ -183,10 +183,6 @@ header h4 {
     overflow: hidden;
 }
 
-.slider:hover {
-    animation-play-state: paused;
-}
-
 @keyframes slide {
     0% {
         margin-left: 50px;
