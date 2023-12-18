@@ -390,10 +390,6 @@ header h4 {
         filter: grayscale(0%);
     }
 
-    #gallery img:hover {
-        height: 300px;
-    }
-
     .price-cards {
         flex-direction: column-reverse;
         align-items: center;
