@@ -25,6 +25,28 @@
     
 }
 
+@keyframes slide {
+    0% {
+        margin-left: 50px;
+    }
+    20% {
+        margin-left: -1500px;
+    }
+    40% {
+        margin-left: -3000px;
+    }
+    60% {
+        margin-left: -4500px;
+    }
+    80% {
+        margin-left: -6750px;
+    }
+    100% {
+        margin-left: 50px;
+        animation-timing-function: ease-in-out;
+    }
+}
+
 * {
     transition: all 0.5s ease-in-out;
 }
@@ -183,28 +205,6 @@ header h4 {
     overflow: hidden;
 }
 
-@keyframes slide {
-    0% {
-        margin-left: 50px;
-    }
-    20% {
-        margin-left: -1500px;
-    }
-    40% {
-        margin-left: -3000px;
-    }
-    60% {
-        margin-left: -4500px;
-    }
-    80% {
-        margin-left: -6750px;
-    }
-    100% {
-        margin-left: 50px;
-        animation-timing-function: ease-in-out;
-    }
-}
-
 #gallery img {
     height: 500px;
     max-width: 1080px;
@@ -214,8 +214,7 @@ header h4 {
 }
 
 #gallery img:hover {
-    height: 550px;
-    border: 2px solid var(--text-color);
+    border: 1px solid var(--text-color);
     filter: grayscale(0%);
     box-shadow: 0px 0px 10px 10px rgba(242, 242, 242, 0.2);
 }
@@ -298,6 +297,29 @@ header h4 {
 
 /* Mobile Styles */
 @media screen and (orientation: portrait) {
+
+    @keyframes slide {
+        0% {
+            margin-left: 0px;
+        }
+        20% {
+            margin-left: -800px;
+        }
+        40% {
+            margin-left: -1600px;
+        }
+        60% {
+            margin-left: -3200px;
+        }
+        80% {
+            margin-left: -4800px;
+        }
+        100% {
+            margin-left: 0px;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -363,35 +385,9 @@ header h4 {
         animation-play-state: paused;
     }
 
-    @keyframes slide {
-        0% {
-            margin-left: 0px;
-        }
-        20% {
-            margin-left: -800px;
-        }
-        40% {
-            margin-left: -1600px;
-        }
-        60% {
-            margin-left: -3200px;
-        }
-        80% {
-            margin-left: -4800px;
-        }
-        100% {
-            margin-left: 0px;
-            animation-timing-function: ease-in-out;
-        }
-    }
-
     #gallery img {
         height: 300px;
         filter: grayscale(0%);
-    }
-
-    #gallery img:hover {
-        height: 300px;
     }
 
     .price-cards {
