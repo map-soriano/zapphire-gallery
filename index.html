@@ -121,6 +121,8 @@
                 const img = document.createElement('img');
                 const nav = document.querySelector('nav');
                 const section = document.querySelector('.section-header');
+                const background = document.querySelector('.background');
+                const video = document.getElementById('bg-video');
                 slider.style.filter = 'blur(5px)';
                 slider.style.animationPlayState = 'paused';
                 nav.style.filter = 'blur(5px)';
@@ -135,12 +137,16 @@
                 img.style.zIndex = '1';
                 img.style.cursor = 'zoom-out';
                 img.style.animation = 'fadeIn ease 0.5s';
+                background.style.filter = 'blur(5px)';
+                video.pause();
                 img.onclick = () => {
                     img.remove();
                     slider.style.filter = 'none';
                     nav.style.filter = 'none';
                     section.style.filter = 'none';
                     slider.style.animationPlayState = 'running';
+                    background.style.filter = 'none';
+                    video.play();
                 }
                 document.body.appendChild(img);
             }
