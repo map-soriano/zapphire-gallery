@@ -1,6 +1,7 @@
 @import url(home.css);
 @import url(gallery.css);
 @import url(nav.css);
+@import url(pricing.css);
 
 :root {
     --background-color: #0d0d0d;
@@ -82,77 +83,6 @@ hr {
     margin: 20px auto;
     padding: 0;
     box-shadow: 0px 5px 10px 5px rgba(242, 242, 242, 0.25);
-}
-
-/* Pricing */
-#pricing {
-    width: 100%;
-    height: 100vh;
-    padding-bottom: 15%;
-}
-
-.price-cards {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
-}
-
-.item-card {
-    height: 100%;
-    width: 500px;
-    background-color: var(--main-nav-color);
-    border: 1px solid #f2f2f25a;
-    border-radius: 20px;
-    box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.2);
-    padding: 50px;
-}
-
-.item-card:hover {
-    transform: scale(1.025);
-    box-shadow: 0 0 10px 10px rgba(100, 100, 100, 0.2);
-}
-
-.card-header img {
-    height: 300px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-}
-
-.short {
-    width: 100%;
-    box-shadow: none;
-    margin: 10px auto;
-}
-
-.card-header h2 {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.card-header h3 {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0 0 -15px 0;
-}
-
-.card-header h4 {
-    font-weight: 300;
-    margin: 0 0 -8px 0;
-}
-
-.card-body {
-    margin: 0;
-}
-
-.card-body ul {
-    font-size: 24px;
-    list-style-type: symbols(cyclic "🔹");
-    filter: grayscale(100%);
 }
 
 /* Mobile Styles */
