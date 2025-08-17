@@ -66,5 +66,4 @@
 .card-body ul {
     font-size: 24px;
     list-style-type: symbols(cyclic "🔹");
-    filter: grayscale(100%);
 }

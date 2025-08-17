@@ -15,11 +15,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="background">
-            <video autoplay muted loop id="bg-video">
-                <source src="assets/mp4/vid.mp4" type="video/mp4">
-            </video>
-        </div>
+    <div class="background"></div>
         <div class="header-container">
             <header>
                 <nav>
@@ -43,24 +39,30 @@
                         <p>Get the perfect gift this coming holidays!</p>
                     </div>
                     <hr>
-                    <div class="slider">
-                        <img src="assets/img/colored/1.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/colored/2.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/3.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/4.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/5.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/6.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/7.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/8.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/9.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/10.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/11.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/1.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/2.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/3.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/4.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/others/1.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/others/2.JPG" onclick="fullImage(this)">
+                    <div class="gallery-preview-nav">
+                        <div class="gallery-preview">
+                            <div class="gallery-preview-bg"></div>
+                            <img id="gallery-main-preview" src="assets/img/colored/1.jpg" alt="Preview" loading="lazy">
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <img src="assets/img/colored/1.jpg" data-index="0" class="thumb active" loading="lazy">
+                            <img src="assets/img/colored/2.JPG" data-index="1" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/3.JPG" data-index="2" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/4.JPG" data-index="3" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/5.JPG" data-index="4" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/6.JPG" data-index="5" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/7.JPG" data-index="6" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/8.JPG" data-index="7" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/9.JPG" data-index="8" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/10.JPG" data-index="9" class="thumb" loading="lazy">
+                            <img src="assets/img/colored/11.JPG" data-index="10" class="thumb" loading="lazy">
+                            <img src="assets/img/grayscaled/1.jpg" data-index="11" class="thumb" loading="lazy">
+                            <img src="assets/img/grayscaled/2.jpg" data-index="12" class="thumb" loading="lazy">
+                            <img src="assets/img/grayscaled/3.jpg" data-index="13" class="thumb" loading="lazy">
+                            <img src="assets/img/grayscaled/4.jpg" data-index="14" class="thumb" loading="lazy">
+                            <img src="assets/img/others/1.JPG" data-index="15" class="thumb" loading="lazy">
+                            <img src="assets/img/others/2.JPG" data-index="16" class="thumb" loading="lazy">
+                        </div>
                     </div>
                 </section>
                 <hr class="full">
@@ -74,7 +76,7 @@
                     <div class="price-cards">
                         <div class="item-card">
                             <div class="card-header">
-                                <img src="assets/img/colored/6.JPG">
+                                <img src="assets/img/colored/6.JPG" loading="lazy">
                                 <h2>Colored Portrait</h2>
                                 <hr class="short">
                                 <h4>Price starts at</h4>
@@ -91,7 +93,7 @@
                         </div>
                         <div class="item-card">
                             <div class="card-header">
-                                <img src="assets/img/grayscaled/3.jpg">
+                                <img src="assets/img/grayscaled/3.jpg" loading="lazy">
                                 <h2>Grayscaled Portrait</h2>
                                 <hr class="short">
                                 <h4>Price starts at</h4>
@@ -116,43 +118,69 @@
                 confirm("This will open Facebook in a new tab. Continue?") ? window.open( href="https://www.facebook.com/rvch.pasamonte18", "_blank") : null;
             }
 
-            const fullImage = (event) => {
-                const slider = document.querySelector('.slider');
-                const img = document.createElement('img');
-                const nav = document.querySelector('nav');
-                const section = document.querySelector('.section-header');
-                const hr = document.querySelector('hr');
-                const background = document.querySelector('.background');
-                const video = document.getElementById('bg-video');
-                slider.style.filter = 'blur(5px)';
-                slider.style.animationPlayState = 'paused';
-                nav.style.filter = 'blur(5px)';
-                section.style.filter = 'blur(5px)';
-                hr.style.filter = 'blur(5px)';
-                img.src = event.src;
-                img.style.width = '100%';
-                img.style.height = '100%';
-                img.style.objectFit = 'contain';
-                img.style.position = 'fixed';
-                img.style.top = '0';
-                img.style.left = '0';
-                img.style.zIndex = '1';
-                img.style.cursor = 'zoom-out';
-                img.style.animation = 'fadeIn ease 0.5s';
-                background.style.filter = 'blur(5px)';
-                video.pause();
-                img.onclick = () => {
-                    img.remove();
-                    slider.style.filter = 'none';
-                    nav.style.filter = 'none';
-                    section.style.filter = 'none';
-                    hr.style.filter = 'none';
-                    slider.style.animationPlayState = 'running';
-                    background.style.filter = 'none';
-                    video.play();
+
+            // Gallery preview + thumbnail navigation logic
+            const galleryImages = [
+                "assets/img/colored/1.jpg",
+                "assets/img/colored/2.JPG",
+                "assets/img/colored/3.JPG",
+                "assets/img/colored/4.JPG",
+                "assets/img/colored/5.JPG",
+                "assets/img/colored/6.JPG",
+                "assets/img/colored/7.JPG",
+                "assets/img/colored/8.JPG",
+                "assets/img/colored/9.JPG",
+                "assets/img/colored/10.JPG",
+                "assets/img/colored/11.JPG",
+                "assets/img/grayscaled/1.jpg",
+                "assets/img/grayscaled/2.jpg",
+                "assets/img/grayscaled/3.jpg",
+                "assets/img/grayscaled/4.jpg",
+                "assets/img/others/1.JPG",
+                "assets/img/others/2.JPG"
+            ];
+            let currentIndex = 0;
+            let autoScrollInterval = null;
+
+            function showImage(index) {
+                const preview = document.getElementById('gallery-main-preview');
+                const thumbs = document.querySelectorAll('.gallery-thumbnails .thumb');
+                const previewBg = document.querySelector('.gallery-preview-bg');
+                if (!galleryImages[index]) return;
+                preview.src = galleryImages[index];
+                if (previewBg) {
+                    previewBg.style.backgroundImage = `url('${galleryImages[index]}')`;
                 }
-                document.body.appendChild(img);
+                thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
+                currentIndex = index;
             }
+
+            function nextImage() {
+                let next = (currentIndex + 1) % galleryImages.length;
+                showImage(next);
+            }
+
+            function startAutoScroll() {
+                if (autoScrollInterval) clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(nextImage, 3500);
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                // Thumbnail click
+                document.querySelectorAll('.gallery-thumbnails .thumb').forEach((thumb, idx) => {
+                    thumb.addEventListener('click', () => {
+                        showImage(idx);
+                        startAutoScroll();
+                    });
+                });
+                showImage(0);
+                startAutoScroll();
+                // Set initial preview background
+                const previewBg = document.querySelector('.gallery-preview-bg');
+                if (previewBg) {
+                    previewBg.style.backgroundImage = `url('${galleryImages[0]}')`;
+                }
+            });
 
             document.addEventListener('contextmenu', (e) => {
                 e.preventDefault();

@@ -1,12 +1,12 @@
 /* Nav */
 .header-container {
     width: 100%;
-    position:fixed;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    z-index: 1;
+    z-index: 100;
 }
 
 header {
@@ -14,6 +14,13 @@ header {
     border-radius: 20px;
     background-color: var(--main-nav-color);
     opacity: 0.5;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 header:hover {
@@ -41,14 +48,18 @@ header h4 img {
 header h4 {
     font-size: 32px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 0 0 0 20px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
     list-style: none;
-    margin-top: -75px;
-    margin-left: 75%;
+    margin: 0 20px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-links li {
