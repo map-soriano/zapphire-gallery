@@ -9,6 +9,7 @@
     font-family: 'DM Sans';
     src: url('../assets/font/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
     font-display: swap;
+    font-style: normal;
 }
 
 @keyframes fadeIn {
