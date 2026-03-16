@@ -88,3 +88,8 @@ document.addEventListener("keydown", (event) => {
         closeLightbox();
     }
 });
+
+const yearEl = document.getElementById("footer-year");
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}

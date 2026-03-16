@@ -44,13 +44,6 @@ section {
     scroll-margin-top: 100px;
 }
 
-#gallery,
-#about,
-#pricing {
-    content-visibility: auto;
-    contain-intrinsic-size: 1000px;
-}
-
 .background {
     height: 100vh;
     width: 100vw;
@@ -178,6 +171,14 @@ hr {
         font-size: 18px;
     }
 
+    .hero .section-header h1 {
+        font-size: clamp(26px, 7vw, 48px);
+    }
+
+    .hero .section-header p {
+        font-size: clamp(16px, 4vw, 28px);
+    }
+
     .section-header p {
         font-size: 36px;
         text-align: center;
@@ -230,6 +231,14 @@ hr {
 
     .card-body ul {
         font-size: 18px;
+    }
+
+    .site-footer {
+        padding: 48px 20px 32px;
+    }
+
+    .footer-tagline {
+        font-size: 28px;
     }
 }
 
