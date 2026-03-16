@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    text-align: center;
 }
 
 .section-header h1,
@@ -98,6 +99,14 @@
     border: 1px solid rgba(242, 242, 242, 0.2);
     border-radius: 20px;
     padding: 24px;
+    text-align: center;
+}
+
+.about-block ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 20px;
 }
 
 .about-block h3 {
