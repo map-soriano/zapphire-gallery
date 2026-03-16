@@ -3,70 +3,120 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portrait commission portfolio for handcrafted colored and grayscaled artworks by Zapphire Collection.">
+        <meta name="theme-color" content="#0d0d0d">
         <meta property="og:title" content="Zapphire Collection">
-        <meta property="og:description" content="Get the perfect gift this coming holidays!">
-        <meta property="og:image" content="	https://zapphire-gallery.vercel.app/assets/img/colored/6.JPG">
+        <meta property="og:description" content="Custom portrait commissions in colored pencils, graphite, and charcoal.">
+        <meta property="og:image" content="https://zapphire-gallery.vercel.app/assets/img/colored/6.JPG">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:url" content="https://zapphire-gallery.vercel.app/">
         <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Zapphire Collection">
+        <meta name="twitter:description" content="Custom portrait commissions in colored pencils, graphite, and charcoal.">
+        <meta name="twitter:image" content="https://zapphire-gallery.vercel.app/assets/img/colored/6.JPG">
+        <link rel="canonical" href="https://zapphire-gallery.vercel.app/">
         <title>Zapphire Collection</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/pricing.css">
     </head>
     <body>
         <div class="background">
-            <video autoplay muted loop id="bg-video">
+            <video autoplay muted loop playsinline poster="assets/img/colored/1.jpg" id="bg-video">
                 <source src="assets/mp4/vid.mp4" type="video/mp4">
             </video>
         </div>
         <div class="header-container">
             <header>
-                <nav>
+                <nav aria-label="Primary">
                     <div>
-                        <h4><a href="#gallery"><img src=assets/img/diamond.png>Zapphire Collection</a></h4>
+                        <h2><a href="#home"><img src="assets/img/diamond.png" alt="Zapphire Collection logo">Zapphire Collection</a></h2>
                     </div>
                     <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a style="cursor: pointer" target="_blank" onclick=showWarning()>Contact</a></li>
+                        <li><a href="https://www.facebook.com/rvch.pasamonte18" target="_blank" rel="noopener noreferrer">Contact</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
         <div>
             <main>
-                <section id="gallery">
+                <section id="home" class="hero" aria-labelledby="hero-title">
                     <div class="section-header">
-                        <h1>Gallery</h1>
+                        <h1 id="hero-title">Handcrafted Portrait Commissions</h1>
+                        <p>Personal, frame-ready artworks made for meaningful gifts and keepsakes.</p>
+                        <div class="hero-actions">
+                            <a class="cta" href="#gallery">View Gallery</a>
+                            <a class="cta secondary" href="https://www.facebook.com/rvch.pasamonte18" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="gallery" aria-labelledby="gallery-title">
+                    <div class="section-header">
+                        <h2 id="gallery-title">Gallery</h2>
                         <div class="stickers">❄️🎁❄️</div>
                         <p>Get the perfect gift this coming holidays!</p>
                     </div>
                     <hr>
                     <div class="slider">
-                        <img src="assets/img/colored/1.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/colored/2.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/3.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/4.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/5.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/6.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/7.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/8.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/9.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/10.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/colored/11.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/1.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/2.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/3.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/grayscaled/4.jpg" onclick="fullImage(this)">
-                        <img src="assets/img/others/1.JPG" onclick="fullImage(this)">
-                        <img src="assets/img/others/2.JPG" onclick="fullImage(this)">
+                        <img src="assets/img/colored/1.jpg" alt="Colored portrait artwork sample 1" data-lightbox="true">
+                        <img src="assets/img/colored/2.JPG" alt="Colored portrait artwork sample 2" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/3.JPG" alt="Colored portrait artwork sample 3" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/4.JPG" alt="Colored portrait artwork sample 4" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/5.JPG" alt="Colored portrait artwork sample 5" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/6.JPG" alt="Colored portrait artwork sample 6" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/7.JPG" alt="Colored portrait artwork sample 7" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/8.JPG" alt="Colored portrait artwork sample 8" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/9.JPG" alt="Colored portrait artwork sample 9" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/10.JPG" alt="Colored portrait artwork sample 10" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/colored/11.JPG" alt="Colored portrait artwork sample 11" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/grayscaled/1.jpg" alt="Grayscaled portrait artwork sample 1" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/grayscaled/2.jpg" alt="Grayscaled portrait artwork sample 2" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/grayscaled/3.jpg" alt="Grayscaled portrait artwork sample 3" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/grayscaled/4.jpg" alt="Grayscaled portrait artwork sample 4" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/others/1.JPG" alt="Commission artwork sample 1" data-lightbox="true" loading="lazy">
+                        <img src="assets/img/others/2.JPG" alt="Commission artwork sample 2" data-lightbox="true" loading="lazy">
                     </div>
                 </section>
                 <hr class="full">
-                <section id="pricing">
+
+                <section id="about" aria-labelledby="about-title">
                     <div class="section-header">
-                        <h1>Pricing</h1>
+                        <h2 id="about-title">About The Artist</h2>
+                        <p>A focused commission process, from photo reference to finished framed portrait.</p>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-block">
+                            <h3>How It Works</h3>
+                            <ul>
+                                <li>Share your preferred photo reference and portrait size.</li>
+                                <li>Receive updates while the portrait is sketched and rendered.</li>
+                                <li>Get a finished framed piece ready for gifting.</li>
+                            </ul>
+                        </div>
+                        <div class="about-block">
+                            <h3>Commission Notes</h3>
+                            <ul>
+                                <li>Turnaround time depends on queue and artwork complexity.</li>
+                                <li>Pricing adjusts for number of subjects and custom requests.</li>
+                                <li>Message directly on Facebook to confirm availability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="pricing" aria-labelledby="pricing-title">
+                    <div class="section-header">
+                        <h2 id="pricing-title">Pricing</h2>
                         <div class="stickers">💎🖼️💎</div>
                         <p>Everything comes with a price, and this one's just right!</p>
                     </div>
@@ -74,7 +124,7 @@
                     <div class="price-cards">
                         <div class="item-card">
                             <div class="card-header">
-                                <img src="assets/img/colored/6.JPG">
+                                <img src="assets/img/colored/6.JPG" alt="Sample colored portrait framed artwork" loading="lazy">
                                 <h2>Colored Portrait</h2>
                                 <hr class="short">
                                 <h4>Price starts at</h4>
@@ -91,7 +141,7 @@
                         </div>
                         <div class="item-card">
                             <div class="card-header">
-                                <img src="assets/img/grayscaled/3.jpg">
+                                <img src="assets/img/grayscaled/3.jpg" alt="Sample grayscaled portrait framed artwork" loading="lazy">
                                 <h2>Grayscaled Portrait</h2>
                                 <hr class="short">
                                 <h4>Price starts at</h4>
@@ -110,53 +160,6 @@
                 </section>
             </main>
         </div>
-        <script>
-
-            const showWarning = () => {
-                confirm("This will open Facebook in a new tab. Continue?") ? window.open( href="https://www.facebook.com/rvch.pasamonte18", "_blank") : null;
-            }
-
-            const fullImage = (event) => {
-                const slider = document.querySelector('.slider');
-                const img = document.createElement('img');
-                const nav = document.querySelector('nav');
-                const section = document.querySelector('.section-header');
-                const hr = document.querySelector('hr');
-                const background = document.querySelector('.background');
-                const video = document.getElementById('bg-video');
-                slider.style.filter = 'blur(5px)';
-                slider.style.animationPlayState = 'paused';
-                nav.style.filter = 'blur(5px)';
-                section.style.filter = 'blur(5px)';
-                hr.style.filter = 'blur(5px)';
-                img.src = event.src;
-                img.style.width = '100%';
-                img.style.height = '100%';
-                img.style.objectFit = 'contain';
-                img.style.position = 'fixed';
-                img.style.top = '0';
-                img.style.left = '0';
-                img.style.zIndex = '1';
-                img.style.cursor = 'zoom-out';
-                img.style.animation = 'fadeIn ease 0.5s';
-                background.style.filter = 'blur(5px)';
-                video.pause();
-                img.onclick = () => {
-                    img.remove();
-                    slider.style.filter = 'none';
-                    nav.style.filter = 'none';
-                    section.style.filter = 'none';
-                    hr.style.filter = 'none';
-                    slider.style.animationPlayState = 'running';
-                    background.style.filter = 'none';
-                    video.play();
-                }
-                document.body.appendChild(img);
-            }
-
-            document.addEventListener('contextmenu', (e) => {
-                e.preventDefault();
-            });
-        </script>
+        <script src="js/app.js" defer></script>
     </body>
 </html>
