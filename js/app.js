@@ -93,3 +93,34 @@ const yearEl = document.getElementById("footer-year");
 if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
 }
+
+// Active nav highlighting via IntersectionObserver
+const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+const sectionIds = Array.from(navLinks)
+    .map((a) => a.getAttribute("href").slice(1))
+    .filter((id) => document.getElementById(id));
+
+const sectionEls = sectionIds.map((id) => document.getElementById(id));
+
+const setActiveLink = (id) => {
+    navLinks.forEach((a) => {
+        const isActive = a.getAttribute("href") === `#${id}`;
+        a.classList.toggle("active", isActive);
+    });
+};
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActiveLink(entry.target.id);
+            }
+        });
+    },
+    {
+        rootMargin: "-40% 0px -55% 0px",
+        threshold: 0,
+    }
+);
+
+sectionEls.forEach((el) => observer.observe(el));

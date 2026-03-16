@@ -80,3 +80,9 @@ header h2 {
 .nav-links a:hover {
     color: #a6a6a6;
 }
+
+.nav-links a.active {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 2px;
+}
