@@ -75,6 +75,12 @@
     box-shadow: 0 0 20px rgba(242, 242, 242, 0.45);
 }
 
+.cta:active {
+    transform: translateY(0);
+    box-shadow: none;
+    opacity: 0.85;
+}
+
 .cta.secondary {
     background: transparent;
     color: var(--text-color);
