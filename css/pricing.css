@@ -1,7 +1,7 @@
 /* Pricing */
 #pricing {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 15%;
 }
 
@@ -21,6 +21,7 @@
     border-radius: 20px;
     box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.2);
     padding: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item-card:hover {
@@ -65,5 +66,12 @@
 
 .card-body ul {
     font-size: 24px;
-    list-style-type: symbols(cyclic "🔹");
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-body ul li::before {
+    content: "🔹";
+    margin-right: 8px;
+    filter: grayscale(100%);
 }
