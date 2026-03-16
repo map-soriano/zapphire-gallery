@@ -7,7 +7,8 @@
     margin-top: 20px;
 }
 
-.section-header h1 {
+.section-header h1,
+.section-header h2 {
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
@@ -26,4 +27,78 @@
 .stickers {
     font-size: 48px;
     margin-top: 20px;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .section-header h1 {
+    font-size: clamp(32px, 4.8vw, 72px);
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.hero .section-header p {
+    max-width: 900px;
+    text-align: center;
+}
+
+.hero-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 10px 20px;
+    background: var(--text-color);
+    color: #101010;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(242, 242, 242, 0.45);
+}
+
+.cta.secondary {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid rgba(242, 242, 242, 0.55);
+}
+
+#about {
+    min-height: 70vh;
+    padding-bottom: 40px;
+}
+
+.about-content {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 20px auto 0;
+    width: min(1200px, 90%);
+}
+
+.about-block {
+    background: rgba(24, 24, 24, 0.8);
+    border: 1px solid rgba(242, 242, 242, 0.2);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.about-block h3 {
+    margin-top: 0;
 }

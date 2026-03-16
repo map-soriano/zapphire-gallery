@@ -1,7 +1,7 @@
 /* Nav */
 .header-container {
     width: 100%;
-    position:fixed;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,16 +10,24 @@
 }
 
 header {
-    width: 80%;
+    width: min(1300px, 92%);
     border-radius: 20px;
     background-color: var(--main-nav-color);
-    opacity: 0.5;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 20px;
 }
 
 header:hover {
     opacity: 1;
-    scale: 1.1;
-    left: 35%;
+    transform: scale(1.02);
     box-shadow: 0px 0px 5px 5px rgba(242, 242, 242, 0.2);
 }
 
@@ -32,28 +40,30 @@ header a:hover {
     color: var(--sub-nav-color);
 }
 
-header h4 img {
+header h2 img {
     height: 24px;
     width: 24px;
     margin-right: 10px;
 }
 
-header h4 {
-    font-size: 32px;
+header h2 {
+    font-size: 28px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 0;
 }
 
 .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     list-style: none;
-    margin-top: -75px;
-    margin-left: 75%;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-    display: inline-block;
-    padding: 0px 10px;
+    display: inline-flex;
+    padding: 0px 6px;
 }
 
 .nav-links li:hover {
@@ -63,7 +73,8 @@ header h4 {
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
+    transition: color 0.25s ease;
 }
 
 .nav-links a:hover {
