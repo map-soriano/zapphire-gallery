@@ -19,6 +19,7 @@
         <link rel="canonical" href="https://zapphire-gallery.vercel.app/">
         <title>Zapphire Collection</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="preload" href="assets/font/DMSans-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/gallery.css">
@@ -26,6 +27,7 @@
         <link rel="stylesheet" href="css/pricing.css">
     </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <div class="background">
             <video autoplay muted loop playsinline preload="metadata" poster="assets/img/colored/1.jpg" id="bg-video" aria-hidden="true">
                 <source src="assets/mp4/vid.mp4" type="video/mp4">
@@ -48,7 +50,7 @@
             </header>
         </div>
         <div>
-            <main>
+            <main id="main-content">
                 <section id="home" class="hero" aria-labelledby="hero-title">
                     <div class="section-header">
                         <h1 id="hero-title">Handcrafted Portrait Commissions</h1>
@@ -67,7 +69,7 @@
                         <p>Get the perfect gift this coming holidays!</p>
                     </div>
                     <hr>
-                    <div class="slider">
+                    <div class="slider" tabindex="0" aria-label="Scrollable artwork gallery">
                         <img src="assets/img/colored/1.jpg" alt="Colored portrait artwork sample 1" data-lightbox="true">
                         <img src="assets/img/colored/2.jpg" alt="Colored portrait artwork sample 2" data-lightbox="true" loading="lazy" decoding="async">
                         <img src="assets/img/colored/3.jpg" alt="Colored portrait artwork sample 3" data-lightbox="true" loading="lazy" decoding="async">

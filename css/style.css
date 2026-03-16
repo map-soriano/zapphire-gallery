@@ -7,7 +7,8 @@
 
 @font-face {
     font-family: 'DM Sans';
-    src: url(/assets/font/DMSans-VariableFont_opsz,wght.ttf) format('truetype');
+    src: url('../assets/font/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 @keyframes fadeIn {
@@ -42,6 +43,13 @@ section {
     scroll-margin-top: 100px;
 }
 
+#gallery,
+#about,
+#pricing {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
 .background {
     height: 100vh;
     width: 100vw;
@@ -64,6 +72,10 @@ hr {
 .lightbox-open nav,
 .lightbox-open main {
     filter: blur(4px);
+}
+
+.lightbox-open {
+    overflow: hidden;
 }
 
 .lightbox {
@@ -218,4 +230,29 @@ hr {
     .card-body ul {
         font-size: 18px;
     }
+}
+
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -44px;
+    z-index: 20;
+    border-radius: 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background: var(--text-color);
+    color: #111111;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+a:focus-visible,
+button:focus-visible,
+img:focus-visible,
+.slider:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
 }

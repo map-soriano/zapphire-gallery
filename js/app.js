@@ -59,6 +59,9 @@ const openLightbox = (sourceImage) => {
 
 lightboxImages.forEach((image) => {
     image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-haspopup", "dialog");
+    image.setAttribute("aria-label", `${image.alt}. Open full-size preview.`);
 
     image.addEventListener("click", () => {
         openLightbox(image);
