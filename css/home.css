@@ -40,6 +40,7 @@
     font-size: clamp(32px, 4.8vw, 72px);
     color: var(--text-color);
     margin-top: 0;
+    text-align: center;
 }
 
 .hero .section-header p {
@@ -87,7 +88,7 @@
 .about-content {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     margin: 20px auto 0;
     width: min(1200px, 90%);
 }
