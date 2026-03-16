@@ -8,6 +8,8 @@ overlay.setAttribute("role", "dialog");
 overlay.setAttribute("aria-modal", "true");
 overlay.setAttribute("aria-label", "Artwork preview");
 
+let lightboxBackgroundElements = [];
+
 const closeButton = document.createElement("button");
 closeButton.type = "button";
 closeButton.className = "lightbox-close";
@@ -31,6 +33,26 @@ const closeLightbox = () => {
     overlay.hidden = true;
     document.body.classList.remove("lightbox-open");
 
+    // Restore background interactivity and aria-hidden state
+    lightboxBackgroundElements.forEach((el) => {
+        if ("inert" in el) {
+            el.inert = false;
+        }
+        el.removeAttribute("inert");
+
+        if (el.dataset.prevAriaHidden !== undefined) {
+            if (el.dataset.prevAriaHidden === "") {
+                el.removeAttribute("aria-hidden");
+            } else {
+                el.setAttribute("aria-hidden", el.dataset.prevAriaHidden);
+            }
+            delete el.dataset.prevAriaHidden;
+        } else {
+            el.removeAttribute("aria-hidden");
+        }
+    });
+    lightboxBackgroundElements = [];
+
     if (video) {
         video.play().catch(() => {
             // Ignore autoplay restrictions after user interaction.
@@ -46,6 +68,22 @@ const openLightbox = (sourceImage) => {
     focusedBeforeOpen = document.activeElement;
     previewImage.src = sourceImage.src;
     previewImage.alt = sourceImage.alt || "Expanded artwork preview";
+
+    // Inert and hide the rest of the page while the lightbox is open
+    lightboxBackgroundElements = Array.from(document.body.children).filter(
+        (el) => el !== overlay
+    );
+    lightboxBackgroundElements.forEach((el) => {
+        if (!Object.prototype.hasOwnProperty.call(el.dataset, "prevAriaHidden")) {
+            el.dataset.prevAriaHidden = el.getAttribute("aria-hidden") || "";
+        }
+        el.setAttribute("aria-hidden", "true");
+
+        if ("inert" in el) {
+            el.inert = true;
+        }
+        el.setAttribute("inert", "");
+    });
 
     overlay.hidden = false;
     document.body.classList.add("lightbox-open");
@@ -81,6 +119,36 @@ overlay.addEventListener("click", (event) => {
     if (event.target === overlay) {
         closeLightbox();
     }
+});
+
+// Trap focus within the lightbox while it is open
+overlay.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") {
+        return;
+    }
+
+    const focusableElements = [closeButton, previewImage];
+    const current = document.activeElement;
+    let index = focusableElements.indexOf(current);
+
+    // If focus is not currently on a known focusable element, move it to the close button
+    if (index === -1) {
+        event.preventDefault();
+        closeButton.focus();
+        return;
+    }
+
+    event.preventDefault();
+
+    if (event.shiftKey) {
+        // Move backwards
+        index = index === 0 ? focusableElements.length - 1 : index - 1;
+    } else {
+        // Move forwards
+        index = index === focusableElements.length - 1 ? 0 : index + 1;
+    }
+
+    focusableElements[index].focus();
 });
 
 document.addEventListener("keydown", (event) => {
